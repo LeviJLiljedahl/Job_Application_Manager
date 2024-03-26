@@ -37,12 +37,12 @@
             jLocationLabel = new Label();
             jRemoteLabel = new Label();
             jRateLabel = new Label();
-            jHourlyLabel = new Label();
+            jPayTypeLabel = new Label();
             aSinceLabel = new Label();
             jDocumentLabel = new Label();
             aStatusLabel = new Label();
             aWebsiteLabel = new Label();
-            jFullTimeLabel = new Label();
+            jTypeLabel = new Label();
             cAboutLabel = new Label();
             companyGroupBox = new GroupBox();
             cEmailTextBox = new TextBox();
@@ -53,6 +53,10 @@
             cEmailLabel = new Label();
             cAddressLabel = new Label();
             jobGroupBox = new GroupBox();
+            jTypeComboBox = new ComboBox();
+            jPayTypeComboBox = new ComboBox();
+            jExperienceComboBox = new ComboBox();
+            jRemoteComboBox = new ComboBox();
             jEducationTextBox = new TextBox();
             jPreferredTextBox = new TextBox();
             jQualificationsTextBox = new TextBox();
@@ -60,12 +64,8 @@
             jSkillsTextBox = new TextBox();
             jAboutTextBox = new TextBox();
             jLocationTextBox = new TextBox();
-            jFullTimeTextBox = new TextBox();
             jDocumentTextBox = new TextBox();
-            jHourlyTextBox = new TextBox();
             jRateTextBox = new TextBox();
-            jExperienceTextBox = new TextBox();
-            jRemoteTextBox = new TextBox();
             jTitleTextBox = new TextBox();
             jEducationLabel = new Label();
             jPreferredLabel = new Label();
@@ -74,17 +74,17 @@
             jSkillsLabel = new Label();
             jAboutLabel = new Label();
             applicationGroupBox = new GroupBox();
-            aStatusTextBox = new TextBox();
+            aStatusComboBox = new ComboBox();
+            aTypeComboBox = new ComboBox();
             aCloseTextBox = new TextBox();
             aWebsiteTextBox = new TextBox();
-            aTypeTextBox = new TextBox();
             aSinceTextBox = new TextBox();
             aDateTextBox = new TextBox();
             aCloseLabel = new Label();
             applicationsListBox = new ListBox();
             extraGroupBox = new GroupBox();
-            eInterestTextBox = new TextBox();
-            eFitTextBox = new TextBox();
+            eFitComboBox = new ComboBox();
+            eInterestComboBox = new ComboBox();
             eExtrasTextBox = new TextBox();
             eNotesTextBox = new TextBox();
             eInterestLabel = new Label();
@@ -169,9 +169,9 @@
             jRemoteLabel.AutoSize = true;
             jRemoteLabel.Location = new Point(12, 73);
             jRemoteLabel.Name = "jRemoteLabel";
-            jRemoteLabel.Size = new Size(160, 18);
+            jRemoteLabel.Size = new Size(66, 18);
             jRemoteLabel.TabIndex = 7;
-            jRemoteLabel.Text = "In-Person vs. Remote:";
+            jRemoteLabel.Text = "Remote:";
             // 
             // jRateLabel
             // 
@@ -182,14 +182,14 @@
             jRateLabel.TabIndex = 8;
             jRateLabel.Text = "Pay Rate:";
             // 
-            // jHourlyLabel
+            // jPayTypeLabel
             // 
-            jHourlyLabel.AutoSize = true;
-            jHourlyLabel.Location = new Point(12, 180);
-            jHourlyLabel.Name = "jHourlyLabel";
-            jHourlyLabel.Size = new Size(129, 18);
-            jHourlyLabel.TabIndex = 9;
-            jHourlyLabel.Text = "Hourly vs. Salary:";
+            jPayTypeLabel.AutoSize = true;
+            jPayTypeLabel.Location = new Point(12, 180);
+            jPayTypeLabel.Name = "jPayTypeLabel";
+            jPayTypeLabel.Size = new Size(78, 18);
+            jPayTypeLabel.TabIndex = 9;
+            jPayTypeLabel.Text = "Pay Type:";
             // 
             // aSinceLabel
             // 
@@ -227,14 +227,14 @@
             aWebsiteLabel.TabIndex = 14;
             aWebsiteLabel.Text = "Website Applied On:";
             // 
-            // jFullTimeLabel
+            // jTypeLabel
             // 
-            jFullTimeLabel.AutoSize = true;
-            jFullTimeLabel.Location = new Point(12, 260);
-            jFullTimeLabel.Name = "jFullTimeLabel";
-            jFullTimeLabel.Size = new Size(178, 18);
-            jFullTimeLabel.TabIndex = 15;
-            jFullTimeLabel.Text = "Full-Time vs. Part-Time:";
+            jTypeLabel.AutoSize = true;
+            jTypeLabel.Location = new Point(12, 260);
+            jTypeLabel.Name = "jTypeLabel";
+            jTypeLabel.Size = new Size(75, 18);
+            jTypeLabel.TabIndex = 15;
+            jTypeLabel.Text = "Job Type:";
             // 
             // cAboutLabel
             // 
@@ -322,6 +322,10 @@
             // jobGroupBox
             // 
             jobGroupBox.BackColor = Color.Aquamarine;
+            jobGroupBox.Controls.Add(jTypeComboBox);
+            jobGroupBox.Controls.Add(jPayTypeComboBox);
+            jobGroupBox.Controls.Add(jExperienceComboBox);
+            jobGroupBox.Controls.Add(jRemoteComboBox);
             jobGroupBox.Controls.Add(jEducationTextBox);
             jobGroupBox.Controls.Add(jPreferredTextBox);
             jobGroupBox.Controls.Add(jQualificationsTextBox);
@@ -329,12 +333,8 @@
             jobGroupBox.Controls.Add(jSkillsTextBox);
             jobGroupBox.Controls.Add(jAboutTextBox);
             jobGroupBox.Controls.Add(jLocationTextBox);
-            jobGroupBox.Controls.Add(jFullTimeTextBox);
             jobGroupBox.Controls.Add(jDocumentTextBox);
-            jobGroupBox.Controls.Add(jHourlyTextBox);
             jobGroupBox.Controls.Add(jRateTextBox);
-            jobGroupBox.Controls.Add(jExperienceTextBox);
-            jobGroupBox.Controls.Add(jRemoteTextBox);
             jobGroupBox.Controls.Add(jTitleTextBox);
             jobGroupBox.Controls.Add(jEducationLabel);
             jobGroupBox.Controls.Add(jPreferredLabel);
@@ -344,11 +344,11 @@
             jobGroupBox.Controls.Add(jAboutLabel);
             jobGroupBox.Controls.Add(jTitleLabel);
             jobGroupBox.Controls.Add(jRemoteLabel);
-            jobGroupBox.Controls.Add(jFullTimeLabel);
+            jobGroupBox.Controls.Add(jTypeLabel);
             jobGroupBox.Controls.Add(jDocumentLabel);
             jobGroupBox.Controls.Add(jExperienceLabel);
             jobGroupBox.Controls.Add(jRateLabel);
-            jobGroupBox.Controls.Add(jHourlyLabel);
+            jobGroupBox.Controls.Add(jPayTypeLabel);
             jobGroupBox.Controls.Add(jLocationLabel);
             jobGroupBox.Location = new Point(498, 12);
             jobGroupBox.Name = "jobGroupBox";
@@ -356,6 +356,42 @@
             jobGroupBox.TabIndex = 4;
             jobGroupBox.TabStop = false;
             jobGroupBox.Text = "Job Position Information";
+            // 
+            // jTypeComboBox
+            // 
+            jTypeComboBox.FormattingEnabled = true;
+            jTypeComboBox.Items.AddRange(new object[] { "Full-Time", "Part-Time", "Contract", "Temporary", "Volunteer", "Internship", "Other" });
+            jTypeComboBox.Location = new Point(93, 257);
+            jTypeComboBox.Name = "jTypeComboBox";
+            jTypeComboBox.Size = new Size(366, 26);
+            jTypeComboBox.TabIndex = 33;
+            // 
+            // jPayTypeComboBox
+            // 
+            jPayTypeComboBox.FormattingEnabled = true;
+            jPayTypeComboBox.Items.AddRange(new object[] { "Hourly", "Salary", "Salary + Bonuses", "Other" });
+            jPayTypeComboBox.Location = new Point(96, 177);
+            jPayTypeComboBox.Name = "jPayTypeComboBox";
+            jPayTypeComboBox.Size = new Size(363, 26);
+            jPayTypeComboBox.TabIndex = 32;
+            // 
+            // jExperienceComboBox
+            // 
+            jExperienceComboBox.FormattingEnabled = true;
+            jExperienceComboBox.Items.AddRange(new object[] { "Internship", "Entry Level", "Associate", "Mid-Senior Level", "Director", "Executive" });
+            jExperienceComboBox.Location = new Point(150, 104);
+            jExperienceComboBox.Name = "jExperienceComboBox";
+            jExperienceComboBox.Size = new Size(309, 26);
+            jExperienceComboBox.TabIndex = 31;
+            // 
+            // jRemoteComboBox
+            // 
+            jRemoteComboBox.FormattingEnabled = true;
+            jRemoteComboBox.Items.AddRange(new object[] { "On-Site", "Remote", "Hybrid", "Other" });
+            jRemoteComboBox.Location = new Point(84, 69);
+            jRemoteComboBox.Name = "jRemoteComboBox";
+            jRemoteComboBox.Size = new Size(375, 26);
+            jRemoteComboBox.TabIndex = 30;
             // 
             // jEducationTextBox
             // 
@@ -406,13 +442,6 @@
             jLocationTextBox.Size = new Size(369, 25);
             jLocationTextBox.TabIndex = 23;
             // 
-            // jFullTimeTextBox
-            // 
-            jFullTimeTextBox.Location = new Point(196, 257);
-            jFullTimeTextBox.Name = "jFullTimeTextBox";
-            jFullTimeTextBox.Size = new Size(263, 25);
-            jFullTimeTextBox.TabIndex = 22;
-            // 
             // jDocumentTextBox
             // 
             jDocumentTextBox.Location = new Point(203, 219);
@@ -420,33 +449,12 @@
             jDocumentTextBox.Size = new Size(256, 25);
             jDocumentTextBox.TabIndex = 21;
             // 
-            // jHourlyTextBox
-            // 
-            jHourlyTextBox.Location = new Point(147, 177);
-            jHourlyTextBox.Name = "jHourlyTextBox";
-            jHourlyTextBox.Size = new Size(312, 25);
-            jHourlyTextBox.TabIndex = 20;
-            // 
             // jRateTextBox
             // 
             jRateTextBox.Location = new Point(92, 139);
             jRateTextBox.Name = "jRateTextBox";
             jRateTextBox.Size = new Size(367, 25);
             jRateTextBox.TabIndex = 19;
-            // 
-            // jExperienceTextBox
-            // 
-            jExperienceTextBox.Location = new Point(150, 104);
-            jExperienceTextBox.Name = "jExperienceTextBox";
-            jExperienceTextBox.Size = new Size(309, 25);
-            jExperienceTextBox.TabIndex = 18;
-            // 
-            // jRemoteTextBox
-            // 
-            jRemoteTextBox.Location = new Point(178, 70);
-            jRemoteTextBox.Name = "jRemoteTextBox";
-            jRemoteTextBox.Size = new Size(281, 25);
-            jRemoteTextBox.TabIndex = 17;
             // 
             // jTitleTextBox
             // 
@@ -512,10 +520,10 @@
             // applicationGroupBox
             // 
             applicationGroupBox.BackColor = Color.Aquamarine;
-            applicationGroupBox.Controls.Add(aStatusTextBox);
+            applicationGroupBox.Controls.Add(aStatusComboBox);
+            applicationGroupBox.Controls.Add(aTypeComboBox);
             applicationGroupBox.Controls.Add(aCloseTextBox);
             applicationGroupBox.Controls.Add(aWebsiteTextBox);
-            applicationGroupBox.Controls.Add(aTypeTextBox);
             applicationGroupBox.Controls.Add(aSinceTextBox);
             applicationGroupBox.Controls.Add(aDateTextBox);
             applicationGroupBox.Controls.Add(aCloseLabel);
@@ -531,12 +539,23 @@
             applicationGroupBox.TabStop = false;
             applicationGroupBox.Text = "Application Information";
             // 
-            // aStatusTextBox
+            // aStatusComboBox
             // 
-            aStatusTextBox.Location = new Point(68, 203);
-            aStatusTextBox.Name = "aStatusTextBox";
-            aStatusTextBox.Size = new Size(391, 25);
-            aStatusTextBox.TabIndex = 11;
+            aStatusComboBox.FormattingEnabled = true;
+            aStatusComboBox.Items.AddRange(new object[] { "Need To Apply", "Application In Progress", "Submitted Application/Waiting on Response", "Company Responded", "Company Responded/Waiting on More Info", "Company Responded/Waiting for My Response", "Communicating Back and Forth", "Interview Scheduled", "Technical Interview Scheduled", "Rejected", "Hired" });
+            aStatusComboBox.Location = new Point(68, 203);
+            aStatusComboBox.Name = "aStatusComboBox";
+            aStatusComboBox.Size = new Size(388, 26);
+            aStatusComboBox.TabIndex = 17;
+            // 
+            // aTypeComboBox
+            // 
+            aTypeComboBox.FormattingEnabled = true;
+            aTypeComboBox.Items.AddRange(new object[] { "In-Person/Paper", "Online Application", "Easy Apply Application", "Resume/CV/Cover Letter", "Other" });
+            aTypeComboBox.Location = new Point(141, 102);
+            aTypeComboBox.Name = "aTypeComboBox";
+            aTypeComboBox.Size = new Size(315, 26);
+            aTypeComboBox.TabIndex = 16;
             // 
             // aCloseTextBox
             // 
@@ -552,15 +571,10 @@
             aWebsiteTextBox.Size = new Size(294, 25);
             aWebsiteTextBox.TabIndex = 9;
             // 
-            // aTypeTextBox
-            // 
-            aTypeTextBox.Location = new Point(141, 102);
-            aTypeTextBox.Name = "aTypeTextBox";
-            aTypeTextBox.Size = new Size(318, 25);
-            aTypeTextBox.TabIndex = 8;
-            // 
             // aSinceTextBox
             // 
+            aSinceTextBox.BackColor = Color.Silver;
+            aSinceTextBox.ForeColor = SystemColors.Info;
             aSinceTextBox.Location = new Point(187, 70);
             aSinceTextBox.Name = "aSinceTextBox";
             aSinceTextBox.Size = new Size(272, 25);
@@ -594,8 +608,8 @@
             // 
             // extraGroupBox
             // 
-            extraGroupBox.Controls.Add(eInterestTextBox);
-            extraGroupBox.Controls.Add(eFitTextBox);
+            extraGroupBox.Controls.Add(eFitComboBox);
+            extraGroupBox.Controls.Add(eInterestComboBox);
             extraGroupBox.Controls.Add(eExtrasTextBox);
             extraGroupBox.Controls.Add(eNotesTextBox);
             extraGroupBox.Controls.Add(eInterestLabel);
@@ -609,19 +623,23 @@
             extraGroupBox.TabStop = false;
             extraGroupBox.Text = "Extra Information";
             // 
-            // eInterestTextBox
+            // eFitComboBox
             // 
-            eInterestTextBox.Location = new Point(162, 122);
-            eInterestTextBox.Name = "eInterestTextBox";
-            eInterestTextBox.Size = new Size(297, 25);
-            eInterestTextBox.TabIndex = 15;
+            eFitComboBox.FormattingEnabled = true;
+            eFitComboBox.Items.AddRange(new object[] { "Yes", "No", "Sort Of", "N/A" });
+            eFitComboBox.Location = new Point(84, 89);
+            eFitComboBox.Name = "eFitComboBox";
+            eFitComboBox.Size = new Size(375, 26);
+            eFitComboBox.TabIndex = 17;
             // 
-            // eFitTextBox
+            // eInterestComboBox
             // 
-            eFitTextBox.Location = new Point(84, 89);
-            eFitTextBox.Name = "eFitTextBox";
-            eFitTextBox.Size = new Size(375, 25);
-            eFitTextBox.TabIndex = 14;
+            eInterestComboBox.FormattingEnabled = true;
+            eInterestComboBox.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
+            eInterestComboBox.Location = new Point(162, 122);
+            eInterestComboBox.Name = "eInterestComboBox";
+            eInterestComboBox.Size = new Size(297, 26);
+            eInterestComboBox.TabIndex = 16;
             // 
             // eExtrasTextBox
             // 
@@ -750,12 +768,12 @@
         private Label jLocationLabel;
         private Label jRemoteLabel;
         private Label jRateLabel;
-        private Label jHourlyLabel;
+        private Label jPayTypeLabel;
         private Label aSinceLabel;
         private Label jDocumentLabel;
         private Label aStatusLabel;
         private Label aWebsiteLabel;
-        private Label jFullTimeLabel;
+        private Label jTypeLabel;
         private Label cAboutLabel;
         private GroupBox companyGroupBox;
         private Label cEmailLabel;
@@ -784,10 +802,8 @@
         private TextBox cAboutTextBox;
         private TextBox cAddressTextBox;
         private TextBox cNameTextBox;
-        private TextBox aStatusTextBox;
         private TextBox aCloseTextBox;
         private TextBox aWebsiteTextBox;
-        private TextBox aTypeTextBox;
         private TextBox aSinceTextBox;
         private TextBox aDateTextBox;
         private TextBox eNotesTextBox;
@@ -798,15 +814,17 @@
         private TextBox jSkillsTextBox;
         private TextBox jAboutTextBox;
         private TextBox jLocationTextBox;
-        private TextBox jFullTimeTextBox;
         private TextBox jDocumentTextBox;
-        private TextBox jHourlyTextBox;
         private TextBox jRateTextBox;
-        private TextBox jExperienceTextBox;
-        private TextBox jRemoteTextBox;
         private TextBox jTitleTextBox;
-        private TextBox eInterestTextBox;
-        private TextBox eFitTextBox;
         private TextBox eExtrasTextBox;
+        private ComboBox jExperienceComboBox;
+        private ComboBox jRemoteComboBox;
+        private ComboBox jTypeComboBox;
+        private ComboBox jPayTypeComboBox;
+        private ComboBox aTypeComboBox;
+        private ComboBox aStatusComboBox;
+        private ComboBox eFitComboBox;
+        private ComboBox eInterestComboBox;
     }
 }

@@ -605,6 +605,7 @@
             applicationsListBox.Size = new Size(267, 616);
             applicationsListBox.TabIndex = 21;
             applicationsListBox.TabStop = false;
+            applicationsListBox.SelectedIndexChanged += applicationsListBox_SelectedIndexChanged;
             // 
             // extraGroupBox
             // 
@@ -699,6 +700,7 @@
             addButton.TabIndex = 30;
             addButton.Text = "Add";
             addButton.UseVisualStyleBackColor = true;
+            addButton.Click += addButton_Click;
             // 
             // updateButton
             // 
@@ -708,6 +710,7 @@
             updateButton.TabIndex = 31;
             updateButton.Text = "Update";
             updateButton.UseVisualStyleBackColor = true;
+            updateButton.Click += updateButton_Click;
             // 
             // deleteButton
             // 
@@ -717,6 +720,7 @@
             deleteButton.TabIndex = 32;
             deleteButton.Text = "Delete";
             deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.Click += deleteButton_Click;
             // 
             // clearButton
             // 
@@ -726,6 +730,7 @@
             clearButton.TabIndex = 33;
             clearButton.Text = "Clear";
             clearButton.UseVisualStyleBackColor = true;
+            clearButton.Click += clearButton_Click;
             // 
             // JAM_Form
             // 
@@ -746,6 +751,7 @@
             Margin = new Padding(4);
             Name = "JAM_Form";
             Text = "Job Application Manager";
+            Load += JAM_Form_Load;
             companyGroupBox.ResumeLayout(false);
             companyGroupBox.PerformLayout();
             jobGroupBox.ResumeLayout(false);

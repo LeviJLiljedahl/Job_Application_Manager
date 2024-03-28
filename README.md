@@ -6,6 +6,6 @@ As of 03/26/2024, this is currently a work in progress and changes will be made 
 
 ## Author
 
-Levi Liljedahl
+Levi J. Liljedahl
 
 Copyright 2024 Levi J. Liljedahl, all rights reserved.

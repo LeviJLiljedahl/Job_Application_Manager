@@ -574,6 +574,7 @@
             // aSinceTextBox
             // 
             aSinceTextBox.BackColor = Color.Silver;
+            aSinceTextBox.Enabled = false;
             aSinceTextBox.ForeColor = SystemColors.Info;
             aSinceTextBox.Location = new Point(187, 70);
             aSinceTextBox.Name = "aSinceTextBox";

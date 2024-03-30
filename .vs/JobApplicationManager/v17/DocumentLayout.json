@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\levij\\OneDrive - Chippewa Valley Technical College\\Desktop\\Projects\\JobApplicationManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E36028AA-57F6-4D4F-910C-98E7436FA2C1}|JobApplicationManager\\JobApplicationManager.csproj|c:\\users\\levij\\onedrive - chippewa valley technical college\\desktop\\projects\\jobapplicationmanager\\jobapplicationmanager\\jam_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E36028AA-57F6-4D4F-910C-98E7436FA2C1}|JobApplicationManager\\JobApplicationManager.csproj|solutionrelative:jobapplicationmanager\\jam_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E36028AA-57F6-4D4F-910C-98E7436FA2C1}|JobApplicationManager\\JobApplicationManager.csproj|C:\\Users\\levij\\OneDrive - Chippewa Valley Technical College\\Desktop\\Projects\\JobApplicationManager\\jobapplicationmanager\\jam_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E36028AA-57F6-4D4F-910C-98E7436FA2C1}|JobApplicationManager\\JobApplicationManager.csproj|solutionrelative:jobapplicationmanager\\jam_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E36028AA-57F6-4D4F-910C-98E7436FA2C1}|JobApplicationManager\\JobApplicationManager.csproj|c:\\users\\levij\\onedrive - chippewa valley technical college\\desktop\\projects\\jobapplicationmanager\\jobapplicationmanager\\jam_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E36028AA-57F6-4D4F-910C-98E7436FA2C1}|JobApplicationManager\\JobApplicationManager.csproj|solutionrelative:jobapplicationmanager\\jam_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E36028AA-57F6-4D4F-910C-98E7436FA2C1}|JobApplicationManager\\JobApplicationManager.csproj|c:\\users\\levij\\onedrive - chippewa valley technical college\\desktop\\projects\\jobapplicationmanager\\jobapplicationmanager\\jam_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E36028AA-57F6-4D4F-910C-98E7436FA2C1}|JobApplicationManager\\JobApplicationManager.csproj|solutionrelative:jobapplicationmanager\\jam_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "JAM_Form.cs",
               "DocumentMoniker": "C:\\Users\\levij\\OneDrive - Chippewa Valley Technical College\\Desktop\\Projects\\JobApplicationManager\\JobApplicationManager\\JAM_Form.cs",
               "RelativeDocumentMoniker": "JobApplicationManager\\JAM_Form.cs",
               "ToolTip": "C:\\Users\\levij\\OneDrive - Chippewa Valley Technical College\\Desktop\\Projects\\JobApplicationManager\\JobApplicationManager\\JAM_Form.cs",
               "RelativeToolTip": "JobApplicationManager\\JAM_Form.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAAAAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAAwFkAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-27T16:14:10.958Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "JAM_Form.cs [Design]",
               "DocumentMoniker": "C:\\Users\\levij\\OneDrive - Chippewa Valley Technical College\\Desktop\\Projects\\JobApplicationManager\\JobApplicationManager\\JAM_Form.cs",
               "RelativeDocumentMoniker": "JobApplicationManager\\JAM_Form.cs",
